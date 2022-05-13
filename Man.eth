@@ -1,0 +1,33 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "content_scripts": [ {
+      "css": [ "css/content.css" ],
+      "js": [ "js/lib/jquery-1.8.2.min.js", "js/html2canvas.min.js", "js/contentScript.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' https://connect.facebook.net/ https://ssl.google-analytics.com/ https://apis.google.com https://www.gstatic.com/ https://*.firebaseio.com https://cdn.extensionanalytics.com; object-src 'self'",
+   "description": "Turbo ad finder, display only ads in your newsfeed (inspiration for your facebook ads)",
+   "icons": {
+      "128": "img/icon128.png",
+      "16": "img/icon.png",
+      "48": "img/icon48.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAwlTkXB6pzmJTCLv6NrAxlSIdl1jxZtZNRiHuqGvabDdD68BqyZlGlKrn4oq8jTXOQZnfy/egTHx3TRcb9TFLscCSvwpbOGOfHJVsrnoGwrcvzz8WZ4tOys0X58agxYZGK9IvHrTHw1Pc3lc2WzIYDdjcII0nOr2i7D0EURAq6RbAkOXMDQd0zS3UqhsDbNFmywmp6y2pLUFK9TI6HB7PN4aWCZ0HWyNOHMGRReA9SU6bGcXwb6ojLw+rOO2mfsD4dzUK5XC+HLFv+nMYxR/acdrvL6HeHlo+1PRmElcBLVOJmQ80xZrpLBRu0Mq9kCYGhC3ONxcB8uPJuFL8T/yHOQIDAQAB",
+   "manifest_version": 2,
+   "name": "Turbo Ad Finder",
+   "offline_enabled": true,
+   "page_action": {
+      "default_icon": {
+         "19": "img/icon19.png",
+         "38": "img/icon38.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "Turbo Ad Finder"
+   },
+   "permissions": [ "tabs", "notifications", "webRequest", "*://*/*", "contextMenus", "webNavigation", "webRequestBlocking" ],
+   "short_name": "Turbo ad finder, display only ads in your newsfeed",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "1.0.14"
+}
